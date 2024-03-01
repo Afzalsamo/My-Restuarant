@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- <header> -->
+        <div class="main-navbar">
+            <div class="logo">
+                <img src="imgs/images-removebg-preview (2).png">
+            </div>
+
+            <div class="navgbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Resturant</a></li>
+                <li><a href="deals.html">Deals</a></li>
+                <li><a href="cities.html">Cities</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </div>
+
+
+            <div class="icons">
+                <button class="order-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Go To Order</button>
+                <i class="fa-solid fa-bars" id="menu"></i>
+            </div>
+
+        </div>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+        style="font-family: 'jost',sans-serif;">
+        <div class="modal-dialog modal-dialog-centered ">
+            <div class="modal-content " style="background-color: #d8d8d8;">
+                <div class="modal-header">
+                    <h1 class="modal-title" id="exampleModalLabel" style="color: #EE6E0A; font-size: 26px;">Select
+                        Order</h1>
+                    <button type="button" data-bs-dismiss="modal" aria-label="Close"
+                        style="border:none; background: transparent; outline:none; font-size: 30px;"><i
+                            style="color: #EE6E0A;; padding-top:10px" class="fa fa-times"
+                            aria-hidden="true"></i></button>
+                </div>
+                <div class="modal-body">
+                    <form action="" method="POST">
+                        <div class="mb-3">
+                            <label for="total_person" class="col-form-label"
+                                style="color: black; font-size: 15px; font-weight: 500;">Total Person<small
+                                    style="color: red">*</small> </label>
+                            <select class="form-select form-select-lg form-control rounded-1" name="person"
+                                id="person">
+                                <option selected>Select Total Person</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div>
+                        <div class="row ">
+                            <div class="mb-3 col-sm-6">
+                                <label for="price_to" class="col-form-label"
+                                    style="color: black; font-size: 15px; font-weight: 500;">Price From<small
+                                        style="color: red">*</small> </label>
+                                <select class="form-select form-select-lg form-control rounded-1" name="to" id="to">
+                                    <option selected>Select From</option>
+                                    <option value="100">100</option>
+                                    <option value="500">500</option>
+                                    <option value="1000">1000</option>
+                                    <option value="1500">1500</option>
+                                    <option value="2000">2000</option>
+                                    <option value="2500">2500</option>
+                                    <option value="3000">3000</option>
+                                    <option value="5000">5000</option>
+                                    <option value="6000">6000</option>
+                                    <option value="7000">7000</option>
+                                    <option value="8000">8000</option>
+                                    <option value="9000">9000</option>
+                                    <option value="10000">10000</option>
+                                </select>
+                            </div>
+                            <div class="mb-3 col-sm-6">
+                                <label for="price_from" class="col-form-label"
+                                    style="color: black; font-size: 15px; font-weight: 500;">Price To<small
+                                        style="color: red">*</small> </label>
+                                <select class="form-select form-select-lg form-control rounded-1" name="from"
+                                    id="from">
+                                    <option selected>Select To</option>
+                                    <option value="">100</option>
+                                    <option value="1000">1000</option>
+                                    <option value="1500">1500</option>
+                                    <option value="2000">2000</option>
+                                    <option value="2500">2500</option>
+                                    <option value="3000">3000</option>
+                                    <option value="5000">5000</option>
+                                    <option value="6000">6000</option>
+                                    <option value="7000">7000</option>
+                                    <option value="8000">8000</option>
+                                    <option value="9000">9000</option>
+                                    <option value="12000">12000</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="city" class="col-form-label"
+                                style="color: black; font-size: 15px; font-weight: 500;">City<small
+                                    style="color: red">*</small></label>
+                            <select class="form-select form-select-lg form-control rounded-1" name="city" id="city">
+                                <option value="">100</option>
+                                <option value="1000">1000</option>
+                                <option value="1500">1500</option>
+                                <option value="2000">2000</option>
+                                <option value="2500">2500</option>
+                                <option value="3000">3000</option>
+                                <option value="5000">5000</option>
+                                <option value="6000">6000</option>
+                                <option value="7000">7000</option>
+                                <option value="8000">8000</option>
+                                <option value="9000">9000</option>
+                                <option value="12000">12000</option>
+                            </select>
+                        </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn px-4 pt-2 pb-2"
+                        style="background-color: #EE6E0A; color: white;">Search</button>
+                </div>
+            </div>
+            </form> 
+        </div>
+    </div>
+    </div>
+    <!-- </header> -->
+
+    <section>
+        <div class="container-fluid mt-5 mb-5" style="padding: 0 5%;">
+            <div class="row pt-2 pb-4 px-4" >
+                <div class="col-md-6 col-sm-12">
+                    <div class="feedback-form mx-1">
+                    <form action="#">
+                        <h1>Drop us a line</h1>
+                        <input type="text" placeholder="Full Name" class="user" name="name">
+                        <input type="email" placeholder="Email Address" class="user" name="email">
+                        <textarea name="msg" cols="15" rows="5" class="msg" placeholder="Your Message"></textarea>
+                        <a href="#" class="btn feed-btn">Submit</a>
+                    </form>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-12">
+                    <div class="feedback-img mx-1 ">
+                        <img src="imgs/feed1.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <footer>
+            <div class="main_footer">
+                <div class="footer_logo">
+                    <img src="imgs/RST LOGO.png" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit
+                        Itaque temporibus nihil ex atque impedit laborum ....</p>
+                </div>
+                <div class="footer_content">
+                  <h1>links</h1>
+                    <a href="#"><li>home</li></a>
+                    <a href="#"><li>resturant</li></a>
+                    <a href="#"><li>blog</li></a>
+                    <a href="#"><li>feedback</li></a>
+                    <a href="#"><li>faqs</li></a>
+                </div>
+                <div class="footer_content">
+                    <h1>links</h1>
+                    <a href="#"><li>home</li></a>
+                    <a href="#"><li>resturant</li></a>
+                    <a href="#"><li>blog</li></a>
+                    <a href="#"><li>feedback</li></a>
+                    <a href="#"><li>faqs</li></a>
+                </div>
+                <div class="footer_content">
+                    <h1>links</h1>
+                    <a href="#"><li>home</li></a>
+                    <a href="#"><li>resturant</li></a>
+                    <a href="#"><li>blog</li></a>
+                    <a href="#"><li>feedback</li></a>
+                    <a href="#"><li>faqs</li></a>
+                </div>
+            </div>
+            <div class="footer_icon_main"> 
+                <div class="footer_copyright">
+                    <p>Copyright © 2023 KuchBhe - kuchbhe.pk</p>
+                </div>
+                <div class="footer_icon">
+                    <a href="#"><i class="fa-brands fa-whatsapp fa-beat-fade"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook fa-beat-fade"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter fa-beat-fade"></i></a>
+                    <a href="#"><i class="fa-brands fa-telegram fa-beat-fade"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram fa-beat-fade"></i></a>
+                </div>
+            </div>
+        </div>
+        </footer>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
+    </script>
+
+  <script>
+    let icon = document.querySelector("#menu");
+    let menu = document.querySelector(".navgbar");
+
+    icon.addEventListener("click", () => {
+
+        menu.classList.toggle("active");
+
+    })
+
+    function myFunction() {
+        var x = document.getElementById("com-box");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+  </script>
+</body>
+</html>

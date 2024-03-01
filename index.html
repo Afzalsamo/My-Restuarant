@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>My Resturant</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="main-navbar">
+            <div class="logo">
+                <img src="imgs/images-removebg-preview (2).png">
+            </div>
+
+            <div class="navgbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Resturant</a></li>
+                <li><a href="deals.html">Deals</a></li>
+                <li><a href="cities.html">Cities</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </div>
+
+
+            <div class="icons">
+                <button class="order-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Go To Order</button>
+                <i class="fa-solid fa-bars" id="menu"></i>
+            </div>
+
+        </div>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+            style="font-family: 'jost',sans-serif;">
+            <div class="modal-dialog modal-dialog-centered ">
+                <div class="modal-content " style="background-color: #d8d8d8;">
+                    <div class="modal-header">
+                        <h1 class="modal-title" id="exampleModalLabel" style="color: #EE6E0A; font-size: 26px;">Select
+                            Order</h1>
+                        <button type="button" data-bs-dismiss="modal" aria-label="Close"
+                            style="border:none; background: transparent; outline:none; font-size: 30px;"><i
+                                style="color: #EE6E0A;; padding-top:10px" class="fa fa-times"
+                                aria-hidden="true"></i></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="" method="POST">
+                            <div class="mb-3">
+                                <label for="total_person" class="col-form-label"
+                                    style="color: black; font-size: 15px; font-weight: 500;">Total Person<small
+                                        style="color: red">*</small> </label>
+                                <select class="form-select form-select-lg form-control rounded-1" name="person"
+                                    id="person">
+                                    <option selected>Select Total Person</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                            </div>
+                            <div class="row ">
+                                <div class="mb-3 col-sm-6">
+                                    <label for="price_to" class="col-form-label"
+                                        style="color: black; font-size: 15px; font-weight: 500;">Price From<small
+                                            style="color: red">*</small> </label>
+                                    <select class="form-select form-select-lg form-control rounded-1" name="to" id="to">
+                                        <option selected>Select From</option>
+                                        <option value="100">100</option>
+                                        <option value="500">500</option>
+                                        <option value="1000">1000</option>
+                                        <option value="1500">1500</option>
+                                        <option value="2000">2000</option>
+                                        <option value="2500">2500</option>
+                                        <option value="3000">3000</option>
+                                        <option value="5000">5000</option>
+                                        <option value="6000">6000</option>
+                                        <option value="7000">7000</option>
+                                        <option value="8000">8000</option>
+                                        <option value="9000">9000</option>
+                                        <option value="10000">10000</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3 col-sm-6">
+                                    <label for="price_from" class="col-form-label"
+                                        style="color: black; font-size: 15px; font-weight: 500;">Price To<small
+                                            style="color: red">*</small> </label>
+                                    <select class="form-select form-select-lg form-control rounded-1" name="from"
+                                        id="from">
+                                        <option selected>Select To</option>
+                                        <option value="">100</option>
+                                        <option value="1000">1000</option>
+                                        <option value="1500">1500</option>
+                                        <option value="2000">2000</option>
+                                        <option value="2500">2500</option>
+                                        <option value="3000">3000</option>
+                                        <option value="5000">5000</option>
+                                        <option value="6000">6000</option>
+                                        <option value="7000">7000</option>
+                                        <option value="8000">8000</option>
+                                        <option value="9000">9000</option>
+                                        <option value="12000">12000</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="city" class="col-form-label"
+                                    style="color: black; font-size: 15px; font-weight: 500;">City<small
+                                        style="color: red">*</small></label>
+                                <select class="form-select form-select-lg form-control rounded-1" name="city" id="city">
+                                    <option value="">100</option>
+                                    <option value="1000">1000</option>
+                                    <option value="1500">1500</option>
+                                    <option value="2000">2000</option>
+                                    <option value="2500">2500</option>
+                                    <option value="3000">3000</option>
+                                    <option value="5000">5000</option>
+                                    <option value="6000">6000</option>
+                                    <option value="7000">7000</option>
+                                    <option value="8000">8000</option>
+                                    <option value="9000">9000</option>
+                                    <option value="12000">12000</option>
+                                </select>
+                            </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn px-4 pt-2 pb-2"
+                            style="background-color: #EE6E0A; color: white;">Search</button>
+                    </div>
+                </div>
+                </form> 
+            </div>
+        </div>
+        </div>
+
+        <div class="hero-section">
+            <div class="hero-text">
+                <h1> Pakistan's Largest <br> Platform for Foodies! </h1>
+                <p> Bringing Pakistan's first food discovery platform for real foodies. Search your favorite <br> food,
+                    give
+                    reviews, check out amazing recipes of top chefs and a lot more.</p>
+            </div>
+
+        </div>
+        <div class="msg-port">
+            <div class="msg-box" id="com-box">
+                <div class="msg-show" id="msg-show">
+                    <div class="comment-box">
+                        <h5>AFZAL Ali</h5>
+                        <small>Lorem ipsum dolor consectetur adipisicing Voluptatem minus.</small>
+                    </div>
+                    <div class="comment-box">
+                        <h5>AFZAl Ali</h5>
+                        <small>Lorem ipsum dolor consectetur adipisicing Voluptatem minus.</small>
+                    </div>
+                    <div class="comment-box">
+                        <h5>AFZAl Ali</h5>
+                        <small>Lorem ipsum dolor consectetur adipisicing Voluptatem minus.</small>
+                    </div>
+                </div>
+
+                <form>
+                    <input type="text" placeholder="Your Name" class="com-name">
+                    <input type="text" placeholder="Your Comment" class="com-msg">
+                    <button class="com-btn">Submit</button>
+                </form>
+
+            </div>
+            <div class="msg-icon" onclick="myFunction()">
+                <div class="anchor"><i class="fa-regular fa-message"></i></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- top deals -->
+    <section class="deals-sec pt-5 pb-4" style="background-color: #ffdeb6;">
+        <div class="container">
+            <h1 class="h1">Top Deals</h1>
+            <div class="row" style="padding: 50px 0;">
+
+                <div class="col-md-4 col-sm-6">
+
+                    <div class="top-deals">
+                        <div class="deals-card">
+                            <div class="ribbon"><span>Hot Deals</span></div>
+                            <div class="deals-img">
+                                <img src="imgs/p3.jpg" alt=""  height="230px">
+                            </div>
+                            <div class="deals-content">
+                                <h1>Hot Deals</h1>
+                                <div class="deals-text">
+                                    <p><i class="fa-solid fa-check mt-2 mx-1"></i> 1 Small Peporni Pizza </p>
+                                    <p><i class="fa-solid fa-check mt-2 mx-1"></i> 1 Small ChickenCheese Pizza </p>
+                                    <p><i class="fa-solid fa-check mt-2 mx-1"></i> 1 1.5Liter Cold Drink </p>
+                                    <ul>
+                                        <span>Rs: 949.0</span>
+                                        <a href="#"><button class="btn-order">Order Now</button></a>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+
+                    <div class="top-deals">
+                        <div class="deals-card">
+                            <div class="ribbon"><span>Hot Deals</span></div>
+                            <div class="deals-img">
+                                <img src="imgs/p4.png" alt="">
+                            </div>
+                            <div class="deals-content">
+                                <h1>Hot Deals</h1>
+                                <div class="deals-text">
+                                    <p><i class="fa-solid fa-check mt-2 mx-1"></i> 1 Small Peporni Pizza </p>
+                                    <p><i class="fa-solid fa-check mt-2 mx-1"></i> 1 Small ChickenCheese Pizza </p>
+                                    <p><i class="fa-solid fa-check mt-2 mx-1"></i> 1 1.5Liter Cold Drink </p>
+                                    <ul>
+                                        <span>Rs: 849.0</span>
+                                        <a href="#"><button class="btn-order">Order Now</button></a>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+
+                    <div class="top-deals">
+                        <div class="deals-card">
+                            <div class="ribbon"><span>Hot Deals</span></div>
+                            <div class="deals-img">
+                                <img src="imgs/p4.png" alt="">
+                            </div>
+                            <div class="deals-content">
+                                <h1>Hot Deals</h1>
+                                <div class="deals-text">
+                                    <p><i class="fa-solid fa-check mt-2 mx-1"></i> 1 Small Peporni Pizza </p>
+                                    <p><i class="fa-solid fa-check mt-2 mx-1"></i> 1 Small ChickenCheese Pizza </p>
+                                    <p><i class="fa-solid fa-check mt-2 mx-1"></i> 1 1.5Liter Cold Drink </p>
+                                    <ul>
+                                        <span>Rs: 949.0</span>
+                                        <a href="#"><button class="btn-order">Order Now</button></a>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+
+                    <div class="top-deals">
+                        <div class="deals-card">
+                            <div class="ribbon"><span>Hot Deals</span></div>
+                            <div class="deals-img">
+                                <img src="imgs/p4.png" alt="">
+                            </div>
+                            <div class="deals-content">
+                                <h1>Hot Deals</h1>
+                                <div class="deals-text">
+                                    <p><i class="fa-solid fa-check mt-2 mx-1"></i> 1 Small Peporni Pizza </p>
+                                    <p><i class="fa-solid fa-check mt-2 mx-1"></i> 1 Small ChickenCheese Pizza </p>
+                                    <p><i class="fa-solid fa-check mt-2 mx-1"></i> 1 1.5Liter Cold Drink </p>
+                                    <ul>
+                                        <span>Rs: 849.0</span>
+                                        <a href="#"><button class="btn-order">Order Now</button></a>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+
+                    <div class="top-deals">
+                        <div class="deals-card">
+                            <div class="ribbon"><span>Hot Deals</span></div>
+                            <div class="deals-img">
+                                <img src="imgs/p4.png" alt="">
+                            </div>
+                            <div class="deals-content">
+                                <h1>Hot Deals</h1>
+                                <div class="deals-text">
+                                    <p><i class="fa-solid fa-check mt-2 mx-1"></i> 1 Small Peporni Pizza </p>
+                                    <p><i class="fa-solid fa-check mt-2 mx-1"></i> 1 Small ChickenCheese Pizza </p>
+                                    <p><i class="fa-solid fa-check mt-2 mx-1"></i> 1 1.5Liter Cold Drink </p>
+                                    <ul>
+                                        <span>Rs: 849.0</span>
+                                        <a href="#"><button class="btn-order">Order Now</button></a>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+
+                    <div class="top-deals">
+                        <div class="deals-card">
+                            <div class="ribbon"><span>Hot Deals</span></div>
+                            <div class="deals-img">
+                                <img src="imgs/p3.jpg" alt=""  height="230px">
+                            </div>
+                            <div class="deals-content">
+                                <h1>Hot Deals</h1>
+                                <div class="deals-text">
+                                    <p><i class="fa-solid fa-check mt-2 mx-1"></i> 1 Small Peporni Pizza </p>
+                                    <p><i class="fa-solid fa-check mt-2 mx-1"></i> 1 Small ChickenCheese Pizza </p>
+                                    <p><i class="fa-solid fa-check mt-2 mx-1"></i> 1 1.5Liter Cold Drink </p>
+                                    <ul>
+                                        <span>Rs: 949.0</span>
+                                        <a href="#"><button class="btn-order">Order Now</button></a>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- top-deals-ends   -->
+
+    <section class="blog-sec" style="padding: 65px 0;">
+        <div class="container">
+            <h1 class="h1">Our Blog</h1>
+            <div class="row">
+                <div class="col-md-3  col-sm-6">
+                    <div class="blog-card">
+                        <div class="blog-img">
+                            <img src="imgs/blog1.jpeg">
+                        </div>
+                        <div class="blog-text">
+                            <h4>CAN ICE CREAM HELP YOU LOSE WEIGHT?</h4>
+                            <span>27/04/2023</span>
+                            <p>Sweet, creamy, and cold – How can one not crave such a foodstuff? Perhaps, one simply
+                                cannot. Ice creams are one of the…</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="blog-card">
+                        <div class="blog-img">
+                            <img src="imgs/download.jpg">
+                        </div>
+                        <div class="blog-text">
+                            <h4>CAN ICE CREAM HELP YOU LOSE WEIGHT?</h4>
+                            <span>27/04/2023</span>
+                            <p>Sweet, creamy, and cold – How can one not crave such a foodstuff? Perhaps, one simply
+                                cannot. Ice creams are one of the…</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="blog-card">
+                        <div class="blog-img">
+                            <img src="imgs/pexels-photo-1362534.jpeg">
+                        </div>
+                        <div class="blog-text">
+                            <h4>CAN ICE CREAM HELP YOU LOSE WEIGHT?</h4>
+                            <span>27/04/2023</span>
+                            <p>Sweet, creamy, and cold – How can one not crave such a foodstuff? Perhaps, one simply
+                                cannot. Ice creams are one of the…</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="blog-card">
+                        <div class="blog-img">
+                            <img src="imgs/download (2).jpg" height="175px">
+                        </div>
+                        <div class="blog-text">
+                            <h4>CAN ICE CREAM HELP YOU LOSE WEIGHT?</h4>
+                            <span>27/04/2023</span>
+                            <p>Sweet, creamy, and cold – How can one not crave such a foodstuff? Perhaps, one simply
+                                cannot. Ice creams are one of the…</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+       <section>
+
+        <div class="container-fluid pt-5">
+            <div class="container">
+                <div class="text-center pb-2">
+                    <p class="section-title px-5"><span class="px-2">Our Master Chefs</span></p>
+                    <h1 class="mb-4">Meet Our Chefs</h1>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-lg-3 text-center team mb-5">
+                        <div class="position-relative overflow-hidden mb-4" style="border-radius: 100%;">
+                            <img class="img-fluid w-100" src="imgs/images (1).jpg" alt="" >
+                            <div
+                                class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
+                                <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                                    href="#"><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                                    href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-outline-light text-center px-0" style="width: 38px; height: 38px;"
+                                    href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <h4>Julia Smith</h4>
+                        <i>Karhai Specialist</i>
+                    </div>
+                    <div class="col-md-6 col-lg-3 text-center team mb-5">
+                        <div class="position-relative overflow-hidden mb-4" style="border-radius: 100%;">
+                            <img class="img-fluid w-100" src="imgs/images (2).jpg" alt="" >
+                            <div
+                                class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
+                                <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                                    href="#"><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                                    href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-outline-light text-center px-0" style="width: 38px; height: 38px;"
+                                    href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <h4>Jhon Doe</h4>
+                        <i>Expert In All</i>
+                    </div>
+                    <div class="col-md-6 col-lg-3 text-center team mb-5">
+                        <div class="position-relative overflow-hidden mb-4" style="border-radius: 100%;">
+                            <img class="img-fluid w-100" src="imgs/images (3).jpg" alt="" >
+                            <div
+                                class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
+                                <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                                    href="#"><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                                    href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-outline-light text-center px-0" style="width: 38px; height: 38px;"
+                                    href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <h4>Mollie Ross</h4>
+                        <i>Pizza Maker</i>
+                    </div>
+                    <div class="col-md-6 col-lg-3 text-center team mb-5">
+                        <div class="position-relative overflow-hidden mb-4" style="border-radius: 100%;">
+                            <img class="img-fluid " src="imgs/images (6).jpg" alt="" >
+                            <div
+                                class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
+                                <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                                    href="#"><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                                    href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-outline-light text-center px-0" style="width: 38px; height: 38px;"
+                                    href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <h4>Mrs Donald John</h4>
+                        <i>biryani Expert</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+       </section>
+
+
+
+    <footer>
+        <div class="main_footer">
+            <div class="footer_logo">
+                <img src="imgs/images-removebg-preview (2).png" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit
+                    Itaque temporibus nihil ex atque impedit laborum ....</p>
+            </div>
+            <div class="footer_content">
+                <h1>links</h1>
+                <a href="#">
+                    <li>home</li>
+                </a>
+                <a href="#">
+                    <li>resturant</li>
+                </a>
+                <a href="deals.html">
+                    <li>blog</li>
+                </a>
+                <a href="feedback.html">
+                    <li>feedback</li>
+                </a>
+                <a href="#">
+                    <li>faqs</li>
+                </a>
+            </div>
+            <div class="footer_content">
+                <h1>links</h1>
+                <a href="#">
+                    <li>home</li>
+                </a>
+                <a href="#">
+                    <li>resturant</li>
+                </a>
+                <a href="#">
+                    <li>blog</li>
+                </a>
+                <a href="#">
+                    <li>feedback</li>
+                </a>
+                <a href="#">
+                    <li>faqs</li>
+                </a>
+            </div>
+            <div class="footer_content">
+                <h1>links</h1>
+                <a href="#">
+                    <li>home</li>
+                </a>
+                <a href="#">
+                    <li>resturant</li>
+                </a>
+                <a href="#">
+                    <li>blog</li>
+                </a>
+                <a href="#">
+                    <li>feedback</li>
+                </a>
+                <a href="#">
+                    <li>faqs</li>
+                </a>
+            </div>
+        </div>
+        <div class="footer_icon_main">
+            <div class="footer_copyright">
+                <p>Copyright © 2023 KuchBhe - kuchbhe.pk</p>
+            </div>
+            <div class="footer_icon">
+                <a href="#"><i class="fa-brands fa-whatsapp fa-beat-fade"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook fa-beat-fade"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter fa-beat-fade"></i></a>
+                <a href="#"><i class="fa-brands fa-telegram fa-beat-fade"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram fa-beat-fade"></i></a>
+            </div>
+            <a href="#" class="btn btn-warning p-3 back-to-top fa-beat-fade "><i class="fa fa-angle-double-up"></i></a>
+
+        </div>
+        
+        </div>
+    </footer>
+ 
+<script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+
+</html>
